@@ -1,0 +1,408 @@
+/* ===== COLLECTIONS SECTION ===== */
+.collections-section {
+  width: 100%;
+  background-color: var(--surface-page-canvas);
+  padding: 40px 20px;
+}
+
+/* ===== HEADER ===== */
+.collections-header {
+  max-width: var(--page-max-width);
+  margin: 0 auto var(--spacing-48);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-40);
+}
+
+.collections-heading {
+  flex: 1;
+}
+
+.collections-label {
+  font-family: var(--font-seed-sans);
+  font-size: var(--text-caption);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 2px;
+  color: var(--color-pewter);
+  text-transform: uppercase;
+  margin: 0 0 var(--spacing-12) 0;
+}
+
+.collections-title {
+  font-family: 'Garamond', 'Georgia', serif;
+  font-size: var(--text-heading-xl);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-heading-lg);
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.view-all-link {
+  font-family: var(--font-seed-sans);
+  font-size: var(--text-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-ink);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.view-all-link:hover {
+  color: var(--color-pewter);
+}
+
+.view-all-link .arrow {
+  transition: transform 0.3s ease;
+}
+
+.view-all-link:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* ===== COLLECTIONS GRID (4 Cards) ===== */
+.collections-grid {
+  max-width: var(--page-max-width);
+  margin: 0 auto var(--spacing-48);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-24);
+}
+
+.collection-card {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.3s ease;
+}
+
+.collection-card:hover {
+  transform: scale(1.02);
+}
+
+.collection-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.collection-card:hover .collection-image {
+  transform: scale(1.05);
+}
+
+.collection-overlay {
+  position: relative;
+  z-index: 2;
+  padding: var(--spacing-24);
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+}
+
+.collection-card-title {
+  font-family: var(--font-seed-sans);
+  font-size: var(--text-heading-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-snow-white);
+  margin: 0;
+}
+
+.collection-cta {
+  font-family: var(--font-seed-sans);
+  font-size: var(--text-body-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-snow-white);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  transition: all 0.3s ease;
+}
+
+.collection-card:hover .collection-cta {
+  transform: translateX(4px);
+}
+
+/* ===== PROMOTIONS GRID (2 Larger Cards) ===== */
+.promotions-grid {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-24);
+}
+
+.promo-card {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.3s ease;
+}
+
+.promo-card:hover {
+  transform: scale(1.02);
+}
+
+.promo-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.promo-card:hover .promo-image {
+  transform: scale(1.05);
+}
+
+.promo-overlay {
+  position: relative;
+  z-index: 2;
+  padding: var(--spacing-32);
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+}
+
+.promo-label {
+  font-family: var(--font-seed-sans);
+  font-size: var(--text-caption);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 1px;
+  color: var(--color-pewter);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.promo-title {
+  font-family: 'Garamond', 'Georgia', serif;
+  font-size: var(--text-heading-lg);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-heading-lg);
+  color: var(--color-snow-white);
+  margin: 0;
+}
+
+.promo-subtitle {
+  font-family: 'Garamond', 'Georgia', serif;
+  font-size: var(--text-heading-md);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-snow-white);
+  margin: 0 0 var(--spacing-12) 0;
+}
+
+.promo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  background-color: var(--color-ink);
+  color: var(--color-snow-white);
+  padding: 20px 32px;
+  font-family: var(--font-seed-sans);
+  font-size: var(--text-caption);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+  height: 28px;
+  margin-top: 10px;
+}
+
+.promo-btn:hover {
+  background-color: var(--color-forest-depths);
+  transform: translateY(-2px);
+}
+
+.promo-btn span {
+  transition: transform 0.3s ease;
+}
+
+.promo-btn:hover span {
+  transform: translateX(4px);
+}
+
+/* ===== TABLET (1024px - 768px) ===== */
+@media (max-width: 1024px) {
+  .collections-header {
+    flex-direction: column;
+    gap: var(--spacing-24);
+  }
+
+  .collections-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-20);
+    margin-bottom: var(--spacing-32);
+  }
+
+  .collection-card {
+    height: 250px;
+  }
+
+  .promotions-grid {
+    gap: var(--spacing-20);
+  }
+
+  .promo-card {
+    height: 250px;
+  }
+
+  .collections-title {
+    font-size: var(--text-heading-lg);
+  }
+
+  .promo-title {
+    font-size: var(--text-heading-md);
+  }
+}
+
+/* ===== MOBILE (768px and below) ===== */
+@media (max-width: 768px) {
+  .collections-section {
+    padding: var(--spacing-32) var(--spacing-24);
+  }
+
+  .collections-header {
+    margin-bottom: var(--spacing-32);
+  }
+
+  .collections-label {
+    font-size: var(--text-label);
+  }
+
+  .collections-title {
+    font-size: var(--text-heading-md);
+  }
+
+  .view-all-link {
+    font-size: var(--text-body-sm);
+  }
+
+  .collections-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-16);
+    margin-bottom: var(--spacing-32);
+  }
+
+  .collection-card {
+    height: 200px;
+  }
+
+  .collection-overlay {
+    padding: var(--spacing-16);
+  }
+
+  .collection-card-title {
+    font-size: var(--text-body);
+  }
+
+  .collection-cta {
+    font-size: var(--text-label);
+  }
+
+  .promotions-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-16);
+  }
+
+  .promo-card {
+    height: 200px;
+  }
+
+  .promo-overlay {
+    padding: var(--spacing-24);
+  }
+
+  .promo-label {
+    font-size: var(--text-label);
+  }
+
+  .promo-title {
+    font-size: var(--text-heading-sm);
+  }
+
+  .promo-subtitle {
+    font-size: var(--text-heading-xs);
+  }
+
+  .promo-btn {
+    font-size: var(--text-label);
+    padding: var(--spacing-10) var(--spacing-16);
+  }
+}
+
+/* ===== SMALL MOBILE (480px and below) ===== */
+@media (max-width: 480px) {
+  .collections-section {
+    padding: var(--spacing-24) var(--spacing-16);
+  }
+
+  .collections-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-12);
+    margin-bottom: var(--spacing-24);
+  }
+
+  .collection-card {
+    height: 180px;
+  }
+
+  .collections-title {
+    font-size: var(--text-heading-sm);
+  }
+
+  .view-all-link {
+    font-size: var(--text-label);
+  }
+
+  .promo-card {
+    height: 180px;
+  }
+
+  .promo-overlay {
+    padding: var(--spacing-16);
+  }
+
+  .promo-label {
+    font-size: 10px;
+  }
+
+  .promo-title {
+    font-size: var(--text-heading-xs);
+  }
+
+  .promo-subtitle {
+    margin-bottom: var(--spacing-8);
+  }
+
+  .promo-btn {
+    font-size: 10px;
+    padding: var(--spacing-8) var(--spacing-12);
+  }
+}
